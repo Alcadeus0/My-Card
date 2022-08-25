@@ -1,0 +1,102 @@
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    @include flexCenter();
+    background-color: black;
+    padding: 5%;
+
+    main{
+        background-color: #23252C;
+        padding: 3em 5em;
+        border-radius: 10px;
+
+    }
+}
+main > div{
+    @include flexCenter();
+    flex-direction: column;
+    gap: 1em;
+    background-color: hsl(231, 24%, 12%);    
+    width: 310px;
+    border-radius: 10px;
+
+}
+
+.about{
+    img{
+        border-radius: 10px 10px 0 0;
+    }
+    div{
+        @include flexCenter();
+        flex-direction: column;
+    }
+    h3{
+        margin-top: 5px;
+        color: #F3BF99;
+    }
+    h1{
+        margin-top: 10px;
+        color: #F5F5F5;
+    }
+}
+
+.btns{
+    @include flexCenter();
+    gap: 2.5em;
+
+    button{
+        border: 0px;
+        width: 40%;
+        @include flexCenter();
+        gap: 10px;
+        padding: .5em 1em;
+        font-size: 15px;
+        border-radius: 10px;
+
+        img{
+            height: 10px;
+        }
+        
+    }
+
+    .link{
+        background-color: #5093E2;
+        color: #DCDCDC;
+        img{
+            height: 15px;
+        }
+    }
+}
+
+.info{
+    padding: 0em 2em;
+    color: #DCDCDC;
+    h3{
+        color: #F5F5F5;
+        margin: 1em 0;
+    }
+}
+
+.foot{
+    background-color: black;
+    padding: 1.5em;
+    width: 100%;
+    @include flexCenter();
+    gap: 20px;
+    border-radius: 0 0 10px 10px;
+
+    img{
+        height: 30px;
+    }
+
+}
